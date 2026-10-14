@@ -113,13 +113,14 @@
 
   /* Rackets */
   .rackets h2, .rackets .sub { max-width: 640px; }
-  .grid { list-style: none; padding: 0; margin: 48px 0 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 36px 20px; }
+  .grid { list-style: none; padding: 0; margin: 48px 0 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 36px 20px; }
   .grid li { display: grid; justify-items: center; text-align: center; gap: 4px; }
   .grid img { width: 96px; height: 96px; border-radius: 50%; margin-bottom: 10px;
               box-shadow: 0 0 0 3px rgba(245, 242, 227, 0.14), 0 14px 26px -12px rgba(0, 0, 0, 0.7); }
   .grid strong { font-weight: 900; font-size: 18px; }
   .grid span { color: var(--faint); font-size: 15px; }
   .grid .wall span { color: var(--amber); }
+  .grid .streak span { color: var(--ball); }
 
   /* Beyond the baseline */
   footer { border-top: 6px solid var(--line); margin-inline: clamp(0px, 3vw, 40px); }
@@ -201,7 +202,7 @@
   <section class="rackets">
     <div class="wrap">
       <h2 data-es="Raquetas que se ganan devolviendo.">Rackets you earn by returning.</h2>
-      <p class="sub" data-es="Cada una se desbloquea al devolver cierto número de bolas seguidas. La última es para quien llegue a 75.">Each one unlocks at a number of returns in a row. The last one is for whoever reaches 75.</p>
+      <p class="sub" data-es="Cada una se desbloquea al devolver cierto número de bolas seguidas, y El Muro es para quien llegue a 75. Tres más son para quien cumple el reto del día varios días seguidos.">Each one unlocks at a number of returns in a row, and The Wall is for whoever reaches 75. Three more are for keeping a daily-challenge streak.</p>
       <ul class="grid">
         <li><img src="img/watermelon.png" alt=""><strong data-es="Sandía">Watermelon</strong><span data-es="3 seguidas">3 in a row</span></li>
         <li><img src="img/lightning.png" alt=""><strong data-es="Rayo">Lightning</strong><span data-es="6 seguidas">6 in a row</span></li>
@@ -212,6 +213,9 @@
         <li><img src="img/gold.png" alt=""><strong data-es="Oro">Gold</strong><span data-es="40 seguidas">40 in a row</span></li>
         <li class="wall"><img src="img/wall.png" alt=""><strong data-es="El Muro">The Wall</strong><span data-es="75 seguidas">75 in a row</span></li>
         <li><img src="img/robot.png" alt=""><strong data-es="Robot roto">Broken Bot</strong><span data-es="Gánale un punto a la IA">Win a point off the AI</span></li>
+        <li class="streak"><img src="img/sun.png" alt=""><strong data-es="Sol">Sun</strong><span data-es="Racha de 3 días">3-day streak</span></li>
+        <li class="streak"><img src="img/moon.png" alt=""><strong data-es="Luna">Moon</strong><span data-es="Racha de 7 días">7-day streak</span></li>
+        <li class="streak"><img src="img/aurora.png" alt=""><strong>Aurora</strong><span data-es="Racha de 30 días">30-day streak</span></li>
       </ul>
     </div>
   </section>
