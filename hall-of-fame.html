@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hall of Fame · Ping My Pong</title>
+<meta name="description" content="Everyone who returns 75 in a row in Ping My Pong goes in the Hall of Fame. How to get in.">
+<meta name="theme-color" content="#0f2a66">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --court: #0f2a66; --court-deep: #0b2052; --line: #f5f2e3; --floor: #090e11;
+    --ball: #ff8519; --mint: #33db9e; --amber: #ffc847;
+    --soft: rgba(245, 242, 227, 0.72); --faint: rgba(245, 242, 227, 0.5);
+    --round: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--floor); color: var(--line); font: 600 17px/1.6 var(--round); }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 8px; }
+  .table { background: linear-gradient(180deg, var(--court) 0%, var(--court-deep) 100%);
+           border-inline: 6px solid var(--line); margin-inline: clamp(0px, 3vw, 40px); min-height: 100vh; }
+  .wrap { max-width: 760px; margin: 0 auto; padding-inline: 24px; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 900; font-size: 20px; }
+  .brand img { width: 40px; height: 40px; border-radius: 10px; }
+  .brand b { color: var(--ball); }
+  .lang { background: none; border: 1.5px solid rgba(245, 242, 227, 0.3); color: var(--line); border-radius: 999px;
+          font: 800 14px var(--round); padding: 7px 14px; cursor: pointer; }
+  main .wrap { padding-block: 24px 96px; }
+  h1 { font-weight: 900; font-size: clamp(44px, 8vw, 76px); line-height: 0.95; letter-spacing: -0.04em; margin: 0 0 18px; text-wrap: balance; }
+  .lead { color: var(--soft); font-size: 19px; margin: 0 0 40px; }
+  h2 { font-weight: 900; font-size: 24px; margin: 36px 0 8px; letter-spacing: -0.01em; }
+  p, li { color: var(--soft); }
+  ol, ul { padding-left: 1.2em; }
+  li + li { margin-top: 6px; }
+  strong { color: var(--line); }
+  .back { display: inline-block; margin-top: 48px; color: var(--amber); font-weight: 800; text-underline-offset: 3px; }
+  @media (max-width: 420px) { .wrap { padding-inline: 18px; } .table { border-inline-width: 4px; } }
+</style>
+</head>
+<body>
+<div class="table">
+  <header>
+    <div class="wrap">
+      <a class="brand" href="./"><img src="icon.png" alt=""><span>Ping My Pong<b>.</b></span></a>
+      <button class="lang" type="button" id="lang" aria-label="Español">Español</button>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h1 data-es="Salón de la Fama">Hall of Fame</h1>
+      <p class="lead" data-es="Todo el que devuelva 75 bolas seguidas en Ping My Pong entra al Salón de la Fama, arriba de todo en esta web. El primero se queda con el #1 para siempre. Así se entra.">Everyone who returns 75 balls in a row in Ping My Pong goes in the Hall of Fame, at the very top of this website. The first one keeps the #1 spot forever. Here's how to get in.</p>
+
+      <h2 data-es="Quién la organiza">Who runs it</h2>
+      <p data-es="La organiza Brainrot Games, el desarrollador de Ping My Pong. Apple no patrocina ni participa de ninguna forma en el Salón de la Fama.">It's run by Brainrot Games, the developer of Ping My Pong. Apple is not a sponsor of, and is not involved in, the Hall of Fame in any way.</p>
+
+      <h2 data-es="Cómo entrar">How to get in</h2>
+      <ol>
+        <li data-es="Devuelve 75 bolas seguidas en una sola partida del modo Arcade (sin el reto del día).">Return 75 balls in a row in a single Arcade run (not the daily challenge).</li>
+        <li data-es="Juega con tu cuenta de Game Center activa, para que el puntaje llegue a la tabla global «Best run».">Play signed in to Game Center, so the score reaches the global "Best run" leaderboard.</li>
+        <li data-es="Escribe a danielgo.carrillo+pingmypong@gmail.com con tu nombre de Game Center y la tarjeta de «Challenge a friend» de esa partida, o una captura de la pantalla final.">Email danielgo.carrillo+pingmypong@gmail.com with your Game Center name and that run's "Challenge a friend" card, or a screenshot of the game-over screen.</li>
+      </ol>
+      <p data-es="No hace falta grabar tus partidas. Entra todo el que cumpla las tres cosas, en orden de llegada. Usar la segunda oportunidad dentro del juego está permitido.">You don't need to record your runs. Everyone who does all three gets in, in the order they arrive. Using the in-game second chance is allowed.</p>
+
+      <h2 data-es="Qué te llevas">What you get</h2>
+      <ul>
+        <li data-es="Tu nombre en el Salón de la Fama, lo primero que se ve en esta web, para siempre.">Your name in the Hall of Fame, the first thing on this website, for good.</li>
+        <li data-es="El primero en llegar se queda con el #1, y nadie se lo quita.">The first one to get there keeps the #1 spot, and nobody takes it.</li>
+        <li data-es="Un video sobre tu partida en las redes del juego, si quieres.">A video about your run on the game's social accounts, if you want one.</li>
+      </ul>
+      <p data-es="No hay premio en dinero y no hace falta comprar nada para participar: el juego es gratis.">There's no cash prize, and no purchase is needed to take part: the game is free.</p>
+
+      <h2 data-es="Verificación">Checking</h2>
+      <p data-es="Antes de anunciar a nadie comprobamos que el puntaje aparezca en la tabla global de Game Center con tu nombre y que tengas desbloqueado el logro «The Wall». Si algo no cuadra, podemos pedirte una prueba extra, como un video corto jugando. Puntajes conseguidos con trampas, versiones modificadas o herramientas externas quedan fuera. La decisión de Brainrot Games es final.">Before announcing anyone, we check that the score shows up on the global Game Center leaderboard under your name and that you've unlocked the "The Wall" achievement. If something doesn't add up, we may ask for extra proof, like a short video of you playing. Scores made with cheats, modified versions or outside tools don't count. Brainrot Games' decision is final.</p>
+
+      <h2 data-es="Tu nombre">Your name</h2>
+      <p data-es="Solo publicamos tu nombre si nos das permiso, y puedes elegir cómo aparece (tu nombre de Game Center u otro apodo).">We only publish your name with your permission, and you choose how it appears (your Game Center name or another nickname).</p>
+
+      <h2 data-es="Hasta cuándo">How long</h2>
+      <p data-es="Abierto desde octubre de 2026, sin fecha de cierre. Si las reglas cambian, se actualizan en esta página.">Open since October 2026, with no end date. If the rules change, this page is updated.</p>
+
+      <a class="back" href="./#hall-of-fame" data-es="← Volver al Salón de la Fama">← Back to the Hall of Fame</a>
+    </div>
+  </main>
+</div>
+<script>
+  var lang = "en", english = {};
+  function setLang(next) {
+    lang = next; document.documentElement.lang = next;
+    document.querySelectorAll("[data-es]").forEach(function (el, i) {
+      if (!(i in english)) english[i] = el.textContent;
+      el.textContent = next === "es" ? el.getAttribute("data-es") : english[i];
+    });
+    var b = document.getElementById("lang");
+    b.textContent = next === "es" ? "English" : "Español"; b.setAttribute("aria-label", b.textContent);
+  }
+  document.getElementById("lang").addEventListener("click", function () {
+    setLang(lang === "es" ? "en" : "es");
+    try { localStorage.setItem("lang", lang); } catch (e) {}
+  });
+  var saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  setLang(saved || ((navigator.language || "").toLowerCase().indexOf("es") === 0 ? "es" : "en"));
+</script>
+</body>
+</html>
