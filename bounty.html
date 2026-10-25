@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Wall Bounty · Ping My Pong</title>
+<meta name="description" content="The first player to return 75 in a row in Ping My Pong gets their name on The Wall. Rules.">
+<meta name="theme-color" content="#0f2a66">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --court: #0f2a66; --court-deep: #0b2052; --line: #f5f2e3; --floor: #090e11;
+    --ball: #ff8519; --mint: #33db9e; --amber: #ffc847;
+    --soft: rgba(245, 242, 227, 0.72); --faint: rgba(245, 242, 227, 0.5);
+    --round: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--floor); color: var(--line); font: 600 17px/1.6 var(--round); }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 8px; }
+  .table { background: linear-gradient(180deg, var(--court) 0%, var(--court-deep) 100%);
+           border-inline: 6px solid var(--line); margin-inline: clamp(0px, 3vw, 40px); min-height: 100vh; }
+  .wrap { max-width: 760px; margin: 0 auto; padding-inline: 24px; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 900; font-size: 20px; }
+  .brand img { width: 40px; height: 40px; border-radius: 10px; }
+  .brand b { color: var(--ball); }
+  .lang { background: none; border: 1.5px solid rgba(245, 242, 227, 0.3); color: var(--line); border-radius: 999px;
+          font: 800 14px var(--round); padding: 7px 14px; cursor: pointer; }
+  main .wrap { padding-block: 24px 96px; }
+  h1 { font-weight: 900; font-size: clamp(44px, 8vw, 76px); line-height: 0.95; letter-spacing: -0.04em; margin: 0 0 18px; text-wrap: balance; }
+  .lead { color: var(--soft); font-size: 19px; margin: 0 0 40px; }
+  h2 { font-weight: 900; font-size: 24px; margin: 36px 0 8px; letter-spacing: -0.01em; }
+  p, li { color: var(--soft); }
+  ol, ul { padding-left: 1.2em; }
+  li + li { margin-top: 6px; }
+  strong { color: var(--line); }
+  .back { display: inline-block; margin-top: 48px; color: var(--amber); font-weight: 800; text-underline-offset: 3px; }
+  @media (max-width: 420px) { .wrap { padding-inline: 18px; } .table { border-inline-width: 4px; } }
+</style>
+</head>
+<body>
+<div class="table">
+  <header>
+    <div class="wrap">
+      <a class="brand" href="./"><img src="icon.png" alt=""><span>Ping My Pong<b>.</b></span></a>
+      <button class="lang" type="button" id="lang" aria-label="Español">Español</button>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h1 data-es="La Recompensa del Muro">The Wall Bounty</h1>
+      <p class="lead" data-es="El primer jugador que devuelva 75 bolas seguidas en Ping My Pong tendrá su nombre en El Muro. Estas son las reglas.">The first player to return 75 balls in a row in Ping My Pong gets their name on The Wall. Here are the rules.</p>
+
+      <h2 data-es="Quién la organiza">Who runs it</h2>
+      <p data-es="La organiza Brainrot Games, el desarrollador de Ping My Pong. Apple no patrocina ni participa de ninguna forma en esta recompensa.">It's run by Brainrot Games, the developer of Ping My Pong. Apple is not a sponsor of, and is not involved in, this bounty in any way.</p>
+
+      <h2 data-es="Cómo se gana">How to win</h2>
+      <ol>
+        <li data-es="Devuelve 75 bolas seguidas en una sola partida del modo Arcade (sin el reto del día).">Return 75 balls in a row in a single Arcade run (not the daily challenge).</li>
+        <li data-es="La partida tiene que aparecer en la tabla global «Best run» de Game Center.">The run has to show up on the global "Best run" Game Center leaderboard.</li>
+        <li data-es="Manda una grabación de pantalla de la partida y tu nombre de Game Center a danielgo.carrillo+pingmypong@gmail.com.">Send a screen recording of the run and your Game Center name to danielgo.carrillo+pingmypong@gmail.com.</li>
+      </ol>
+      <p data-es="Gana el primero que cumpla las tres cosas. Usar la segunda oportunidad dentro del juego está permitido.">The first person to do all three wins. Using the in-game second chance is allowed.</p>
+
+      <h2 data-es="El premio">The prize</h2>
+      <ul>
+        <li data-es="Tu nombre en el Salón de la Fama de esta web, para siempre.">Your name in the Hall of Fame on this website, for good.</li>
+        <li data-es="Tu nombre en la página del juego en la App Store.">Your name on the game's App Store page.</li>
+        <li data-es="Un video dedicado en las redes del juego.">A video about your run on the game's social accounts.</li>
+      </ul>
+      <p data-es="No hay premio en dinero y no hace falta comprar nada para participar: el juego es gratis.">There's no cash prize, and no purchase is needed to take part: the game is free.</p>
+
+      <h2 data-es="Verificación">Checking</h2>
+      <p data-es="Revisamos la grabación y la tabla de Game Center antes de anunciar a nadie. Puntajes conseguidos con trampas, versiones modificadas o herramientas externas quedan fuera. La decisión de Brainrot Games es final.">We check the recording and the Game Center leaderboard before announcing anyone. Scores made with cheats, modified versions or outside tools don't count. Brainrot Games' decision is final.</p>
+
+      <h2 data-es="Tu nombre">Your name</h2>
+      <p data-es="Solo publicamos tu nombre si nos das permiso, y puedes elegir cómo aparece (tu nombre de Game Center u otro apodo).">We only publish your name with your permission, and you choose how it appears (your Game Center name or another nickname).</p>
+
+      <h2 data-es="Fechas">Dates</h2>
+      <p data-es="Empieza en octubre de 2026 y termina cuando haya un ganador verificado. Si las reglas cambian, se actualizan en esta página.">It starts in October 2026 and ends when there's a verified winner. If the rules change, this page is updated.</p>
+
+      <a class="back" href="./#bounty" data-es="← Volver al Muro">← Back to The Wall</a>
+    </div>
+  </main>
+</div>
+<script>
+  var lang = "en", english = {};
+  function setLang(next) {
+    lang = next; document.documentElement.lang = next;
+    document.querySelectorAll("[data-es]").forEach(function (el, i) {
+      if (!(i in english)) english[i] = el.textContent;
+      el.textContent = next === "es" ? el.getAttribute("data-es") : english[i];
+    });
+    var b = document.getElementById("lang");
+    b.textContent = next === "es" ? "English" : "Español"; b.setAttribute("aria-label", b.textContent);
+  }
+  document.getElementById("lang").addEventListener("click", function () {
+    setLang(lang === "es" ? "en" : "es");
+    try { localStorage.setItem("lang", lang); } catch (e) {}
+  });
+  var saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  setLang(saved || ((navigator.language || "").toLowerCase().indexOf("es") === 0 ? "es" : "en"));
+</script>
+</body>
+</html>
